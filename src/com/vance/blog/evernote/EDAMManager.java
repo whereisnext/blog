@@ -89,7 +89,7 @@ public class EDAMManager {
 			NoteList noteLists=noteStore.findNotes(getLastToken(), filter, 0, 100);
 			List<Note> notes=noteLists.getNotes();
 			for(Note note:notes){
-				System.out.println(note.getGuid());
+//				System.out.println(note.getGuid());
 				String guid=note.getGuid();
 				String title=note.getTitle();
 				titleMap.put(title,guid);
@@ -147,7 +147,7 @@ public class EDAMManager {
 	public static String getLastToken() {
 		Long tokenExpiration=tokenPool.values().iterator().next();
 		Date date=new Date();
-		System.out.println("Current Time is: "+date.getTime());
+//		System.out.println("Current Time is: "+date.getTime());
 		boolean needRefreshToken;
 		if(tokenExpiration.compareTo(date.getTime())<0){
 			needRefreshToken=true;

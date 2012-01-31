@@ -29,7 +29,7 @@ public class Home extends BasePage {
 	}
 	public Home(){
 		initEdamManager();
-		add(new BlogComponent("blg","blgTitle","This is my first blog......."));
+		add(new BlogComponent("blg","One Blog","A place to remember my path...."));
 		List<String> titles=new ArrayList<String>();
 		Iterator it=titleMap.entrySet().iterator();
 		while(it.hasNext()){

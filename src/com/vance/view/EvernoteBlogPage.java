@@ -45,7 +45,7 @@ import com.evernote.edam.userstore.UserStore;
 import com.vance.blog.evernote.EDAMManager;
 import com.vance.blog.evernote.type.NoteXmlContext;
 
-public class EvernoteBlogPage extends WebPage {
+public class EvernoteBlogPage extends BasePage {
 	private static NoteStore.Client noteStore;
 	private static UserStore.Client userStore;
 	private static String token;
@@ -122,7 +122,6 @@ public class EvernoteBlogPage extends WebPage {
 //				}
 				str.append(s);
 			}
-			System.out.println(str.toString());
 			add(new Label("blgContext",str.toString()).setEscapeModelStrings(false));
 			
 		} catch (EDAMUserException e) {
